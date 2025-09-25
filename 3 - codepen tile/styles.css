@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.tile-container {
+  display: flex;
+  justify-content: center;
+}
+
+.tile {
+  display: inline-block;
+  background-color: red;
+  padding: 20px
+}
+
+.tile-main > img {
+  width: clamp(200px, 70vw, 500px);
+  height: auto;
+}
+
+.tile-info {
+  display: flex;
+}
+
+.tile-info > img {
+  width: 70px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.tile-info-text > h3 {
+  font-size: 1.7em;
+}
+
+.tile-info-text > p {
+  font-size: 1.25em;
+}
+
+.tile-interactions > p {
+  display: inline-block
+}
