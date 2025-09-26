@@ -1,0 +1,83 @@
+:root {
+    --pfp-pixels: 70;
+    --pfp-size: calc(1px * var(--pfp-pixels));
+    --border-pixels: calc((var(--pfp-pixels) / var(--pfp-pixels)) * 4);
+    --border-size: calc(1px * var(--border-pixels));
+    --story-gradient: conic-gradient(#f19d2d, #d33a53, #833ad6, #d33a53, #f19d2d);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.stories {
+    height: fit-content;
+    width: 100vw;
+    padding: 1em;
+    padding-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2.5em;
+    background-color: #1b1b1b;
+}
+
+.story {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.1em;
+    position: relative;
+}
+
+.story p {
+    color: white;
+}
+
+.live .border::after {
+    content: "LIVE";
+    color: white;
+    background-color: red;
+    border: 2px #1b1b1b solid;
+    top: 59%;
+    font-size: 0.7em;
+    padding: 0.2em 0.45em;
+    font-weight: 750;
+    position: absolute;
+}
+
+.border {
+    width: calc(var(--pfp-size) + calc(var(--border-size)) *2);
+    height: calc(var(--pfp-size) + calc(var(--border-size)) *2);
+    /* width: var(--pfp-size);
+    height: var(--pfp-size); */
+    background: var(--story-gradient);
+    border-radius: var(--pfp-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.read .border {
+    background: rgb(138, 138, 138);
+}
+
+.border img {
+    width: var(--pfp-size);
+    height: var(--pfp-size);
+    object-fit: cover;
+    border-radius: var(--pfp-size);
+    border: calc(var(--border-size) / 2) solid #1b1b1b;
+} 

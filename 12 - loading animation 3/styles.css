@@ -13,17 +13,33 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--background-color);
+}
+
+.loading-circles {
+    animation: spin 1.3s infinite;
 }
 
 .main-circle {
     height: var(--circle-size);
     width: var(--circle-size);
-    background-color: red;
+    background: conic-gradient(purple 25%, rgb(232, 230, 233) 25%);
     border-radius: var(--circle-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .outline-hole {
-    height: calc((var(--circle-size) /3) * 2);
-    width: calc((var(--circle-size) /3) * 2);
+    height: calc((var(--circle-size) / 5) * 4);
+    width: calc((var(--circle-size) / 5) * 4);
     background-color: var(--background-color);
+    border-radius: var(--circle-size);
+}
+
+@keyframes spin {
+ 100% {
+        transform: rotate(360deg);
+    }
+    
 }

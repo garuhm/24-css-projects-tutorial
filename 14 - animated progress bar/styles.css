@@ -1,0 +1,51 @@
+:root {
+    --progress-base-height: 50px;
+    --progress-base-width: 80%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-base {
+    height: var(--progress-base-height);
+    width: var(--progress-base-width);
+    background-color: rgb(194, 194, 194);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: var(--progress-base-height);
+    border-radius: 100px;
+    animation: progress infinite 6s linear;
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+        background-color: red;
+    }
+
+    45% {
+        width: 50%;
+        background-color: blue;
+    }
+
+    90% {
+        width: 100%;
+        background-color: green;
+    }
+    100% {
+        width: 100%;
+        background-color: green;        
+    }
+}
