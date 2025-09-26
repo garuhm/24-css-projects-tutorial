@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.circles {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 35px;
+}
+
+.circle {
+    height: 50px;
+    width: 50px;
+    background-color: gray;
+    border-radius: 100px;
+}
+
+#circle-1 {
+    animation: loading 1.5s ease-in-out 0s infinite;
+}
+
+#circle-2 {
+    animation: loading 1.5s ease-in-out 0.2s infinite;
+}
+
+#circle-3 {
+    animation: loading 1.5s ease-in-out 0.4s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(1);
+        background-color: gray;
+    }
+
+    45% {
+        transform: scale(1.2);
+        background-color: rgb(211, 211, 211);
+    }
+
+    90% {
+        transform: scale(1);
+        background-color: gray;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: gray;
+    }
+}

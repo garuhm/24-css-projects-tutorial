@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5em;
+}
+
+.text h1 {
+    font-size: 4em;
+    font-weight: 700;
+
+}
+
+.text h1:after {
+    content: "singing";
+    font-size: 1em;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    background-color: rgb(40, 25, 248);
+    padding: 10px;
+    border-radius: 15px;
+    animation: changing-text infinite 5s;
+    vertical-align: inherit;
+}
+
+@keyframes changing-text {
+    0% {
+        content: "singing"
+    } 
+    25% {
+        content: "guitar"
+    }
+    50% {
+        content: "programming";
+    }
+    75% {
+        content: "long car drives";
+    }
+}

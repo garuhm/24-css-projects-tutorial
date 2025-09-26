@@ -1,6 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Noto Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1d1d1d;
 }
 
 .tile-container {
@@ -10,13 +15,18 @@
 
 .tile {
   display: inline-block;
-  background-color: red;
-  padding: 20px
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 7.5px;
+  max-width: 400px;
 }
 
 .tile-main > img {
-  width: clamp(200px, 70vw, 500px);
+  max-width: 100%;
+  object-fit: cover;
   height: auto;
+  margin-bottom: 0.5em;
+  border-radius: 7.5px;
 }
 
 .tile-info {
@@ -24,19 +34,40 @@
 }
 
 .tile-info > img {
-  width: 70px;
-  height: auto;
-  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  margin-right: 1.5em;
+  border-radius: 7.5px;
 }
 
 .tile-info-text > h3 {
-  font-size: 1.7em;
+  color: white;
+  font-weight: 900;
+  max-width: 100%;
 }
 
 .tile-info-text > p {
-  font-size: 1.25em;
+  font-size: .85em;
+  color: #9e9e9e;
+}
+
+.tile-interactions {
+  display: none;
+  column-gap: 0.5em;
+  margin-top: 0.7em;
+  overflow: hidden;
+  transition: 0.3s ease;
 }
 
 .tile-interactions > p {
-  display: inline-block
+  color: white;
+  display: inline-block;
+  font-size: 0.9em;
+  background-color: #1d1d1d;
+  padding: 0.2em 0.4em;
+  border-radius: 7.5px;
+}
+
+.tile:hover .tile-interactions  {
+  display: flex;
 }

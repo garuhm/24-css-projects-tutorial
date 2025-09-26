@@ -1,0 +1,29 @@
+:root {
+    --circle-size: 300px;
+    --background-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-circle {
+    height: var(--circle-size);
+    width: var(--circle-size);
+    background-color: red;
+    border-radius: var(--circle-size);
+}
+
+.outline-hole {
+    height: calc((var(--circle-size) /3) * 2);
+    width: calc((var(--circle-size) /3) * 2);
+    background-color: var(--background-color);
+}

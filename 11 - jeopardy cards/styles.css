@@ -1,0 +1,125 @@
+:root {
+    --jeopardy-blue: #060CE9
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 70%;
+    min-height: 350px;
+    max-width: 625px;
+    padding: 5em;
+    background-color: var(--jeopardy-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.card h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.6em;
+    color: white;
+}
+
+.container:hover .card {
+    animation: cardflip 1s ease-in-out forwards;
+}
+
+.container:hover .card .text-front {
+    animation: hide 1s ease-in-out forwards;
+}
+
+.container:hover .card .text-back {
+    animation: show 1s ease-in-out forwards;
+}
+
+.container:not(hover) .card {
+    animation: flip-back 1s ease-in-out forwards;
+}
+
+.container:not(hover) .card .text-front {
+    animation: show 1s ease-in-out forwards;
+}
+
+.container:not(hover) .card .text-back {
+    animation: hide 1s ease-in-out forwards;
+}
+
+
+@keyframes hide {
+    0% {
+        display: block;
+    }
+
+    50% {
+        display: block;
+    }
+
+    51% {
+        display: none;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+@keyframes show {
+    0% {
+        display: none;
+    }
+
+    50% {
+        display: none;
+    }
+
+    51% {
+        display: block;
+    }
+
+    100% {
+        display: block;
+    }
+}
+
+@keyframes cardflip {
+    0% {
+        transform: scaleX(1)
+    }
+
+    50% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+@keyframes flip-back {
+    0% {
+        transform: scaleX(1)
+    }
+
+    50% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.squares {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 35px;
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+}
+
+#square-1 {
+    background-color: red;
+    animation: loading 7s ease 0s infinite;
+}
+
+#square-2 {
+    background-color: orange;
+    animation: loading 7s ease 0s infinite;
+}
+
+#square-3 {
+    background-color: blue;
+    animation: loading 7s ease 0s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(45deg);
+    }
+    22% {
+        transform: rotate(135deg);
+    }
+    45% {
+        transform: rotate(225deg);
+    }
+    67% {
+        transform: rotate(315deg);
+    }
+    90% {
+        transform: rotate(405deg);
+    }
+    100% {
+        transform: rotate(405deg);
+    }
+}

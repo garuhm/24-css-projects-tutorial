@@ -1,0 +1,48 @@
+:root {
+    --progress-base-height: 50px;
+    --progress-base-width: 80%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-base {
+    height: var(--progress-base-height);
+    width: var(--progress-base-width);
+    background-color: rgb(194, 194, 194);
+    border-radius: 100px;
+}
+
+.progress-bar {
+    height: var(--progress-base-height);
+    border-radius: 100px;
+}
+
+.stage-1 {
+    width: calc(var(--progress-base-width) / 4);
+        background-color: red;
+}
+
+.stage-2 {
+    width: calc(var(--progress-base-width) / 2);
+    background-color: rgb(255, 115, 0);
+}
+
+.stage-3 {
+    width: calc((var(--progress-base-width) / 4)*3);
+    background-color: rgb(255, 196, 0);
+}
+
+.stage-4 {
+    width: var(--progress-base-width);
+    background-color: rgb(115, 255, 0);
+}
